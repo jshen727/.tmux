@@ -360,6 +360,24 @@ bind -n C-Down select-pane -D
 bind -n M-Right select-window -n
 bind -n M-Left select-window -p
 
+# Ctrl - t or t new window
+unbind t
+unbind C-t
+bind-key t new-window
+bind-key C-t new-window
+
+# Ctrl + a + n : New session
+unbind n
+unbind C-n
+bind-key n new-session
+bind-key C-n new-session
+
+# C + control q to kill session
+# unbind q
+# unbind C-q
+# bind-key q kill-session
+# bind-key C-q kill-session
+
 # move status line to top
 # set -g status-position top
 set -g status-position bottom
