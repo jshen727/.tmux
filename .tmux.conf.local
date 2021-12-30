@@ -347,8 +347,6 @@ unbind C-b
 set -g prefix C-a
 bind C-a send-prefix
 
-set-option -g prefix C-Space
-bind-key C-Space send-prefix
 
 # Ctrl-Space to zoom current pane
 # bind-key -n C-Space resize-pane -Z
@@ -456,4 +454,11 @@ tmux_conf_uninstall_plugins_on_reload=true
 # --Andy's additional settings----------------------------------------------------------
 # split current window vertically
 bind | split-window -h
+
+# Ctrl-Space to zoom current pane
+bind-key -n C-Space resize-pane -Z
+# setw -g window-status-current-format '#{?window_zoomed_flag,#[fg=yellow],}#F#I [#W] '
+
+# set-option -g prefix C-Space
+# bind-key C-Space send-prefix
 
